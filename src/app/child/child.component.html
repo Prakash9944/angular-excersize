@@ -1,0 +1,12 @@
+<!-- https://medium.com/@chilupa/input-output-decorators-in-angular-dda0ce73c74 -->
+
+<p>child works!</p>
+<button (click)="emitEvent()">Emit Event</button>
+
+<!-- In this example, the ParentComponent includes the ChildComponent and passes content (<p>Content projected from parent component</p>) to be projected inside the ChildComponent. -->
+
+<!-- The ng-content directive in the ChildComponent template acts as a placeholder for this content. When the ParentComponent is rendered, the content is projected into the ChildComponent at the location of the ng-content directive. -->
+
+<ng-content></ng-content>
+<p>Chocolates received from Parent — {{chocolateCount}}</p>
+<button (click)="sayThanks()">Say ‘Thank you’ to Parent</button>

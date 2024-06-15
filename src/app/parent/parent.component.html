@@ -1,0 +1,14 @@
+<p>parent works!</p>
+
+<app-child (customEvent)="handleEvent($event)">
+    <p>Content projected from parent component</p>
+</app-child>
+<p>{{ eventData }}</p>
+
+
+<button (click)="sendToChild()">Send Chocolates to Child</button>
+<app-child [chocolateCount]="chocolate" (thanks)="sayThanks($event)"></app-child>
+
+{{thankYouText}}
+
+<!-- <app-child #childRef></app-child> -->
