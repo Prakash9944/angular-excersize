@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ANALYZE_FOR_ENTRY_COMPONENTS, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -11,7 +11,13 @@ import { ServiceService } from './services/service.service';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
-import { ObservableComponent } from './observable/observable.component'
+import { ObservableComponent } from './observable/observable.component';
+import { FormsModule } from '@angular/forms';
+import { HelloComponent } from './hello/hello.component';
+import { HiComponent } from './hi/hi.component';
+import { HostDirective } from './host.directive';
+import { ShowDirective } from './show.directive'
+
 
 @NgModule({
   declarations: [
@@ -19,15 +25,21 @@ import { ObservableComponent } from './observable/observable.component'
     Test1Component,
     ParentComponent,
     ChildComponent,
-    ObservableComponent
+    ObservableComponent,
+    HelloComponent,
+    HiComponent,
+    HostDirective,
+    ShowDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ParentModule1Module,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [ServiceService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [HelloComponent, HiComponent]
 })
 export class AppModule { }

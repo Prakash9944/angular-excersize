@@ -1,5 +1,5 @@
 <h1> {{name}} </h1>
-<app-test1></app-test1>
+<app-test1 #app1></app-test1>
 <app-module1-component></app-module1-component>
 <app-module2-component></app-module2-component>
 
@@ -7,3 +7,29 @@
 
 
 <router-outlet> </router-outlet>
+
+<div #userDiv>
+    <br>
+    <br>
+    <input ngModel #user />
+    <br>
+    <br>
+    <button (click)="onsubmit(user, userDiv)">Click</button>
+</div>
+
+<button (click)="loadComponent()">Hi</button>
+<button (click)="loadComponent()">Hello</button>
+
+<ng-template appHost></ng-template>
+
+
+<p *appShow="display">
+    Start directive
+</p>
+{{user.value}}
+
+<!-- <br>
+<br>
+<input ngModel #users/>
+
+ -->
